@@ -84,7 +84,21 @@ int main() {
     cout << endl;
     // using c syntax
     int otherNum;
+    printf("Enter the value of otherNum: ");
     scanf("%d", &otherNum);
     printf("%d", otherNum);
+
+    // character ascii value
+    char x = 65, y = 66, z = 67;
+    cout << endl << x << y << z << endl;
+   
+    cout << (int)x << endl;
+
+    // typecasting
+    int number1 = 100;
+    cout << (char)number1 << endl;
+
+    // string
+    string str = "Hello";
     return 0;
 }
