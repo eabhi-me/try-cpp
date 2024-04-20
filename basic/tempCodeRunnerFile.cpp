@@ -1,6 +1,7 @@
-/*
-    int arrayRes[arrlen];
-    for(int j=0; j<=arrlen; j++){
-        arrayRes[j] = num%2;
-        num = num / 2;
-    }
+#include<iostream>
+using namespace std;
+int main(){
+    bool say = 1 & 2;
+    cout << say << endl;
+    return 0;
+}
