@@ -126,17 +126,14 @@ void alternateSwap(int array[], int n){
 // Element count
 // incomplete
 int eCount(int array[], int n){
-    int i=0, j=0, count=0, eCount[n];
+    int i=0, j=0, count=0, cparr[n];
     while(i<n){
         while(j<n){
             if(array[i]==array[j]);
             count++;
             j++;
         }
-        eCount[i]=count;
         i++;
     }
-    return eCount[5];
-    print_array(eCount,5);
 
 }
