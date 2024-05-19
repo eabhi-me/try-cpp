@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+// base class
 class species{
     public:
     bool sex; // 0 for female and 1 for male
@@ -7,6 +8,7 @@ class species{
     string home;
 
 };
+// sub class under species
 class mammel:public species{
     public:
     int ageSpan=100;
@@ -16,14 +18,17 @@ class mammel:public species{
     };
     
 };
+// sub class under species
 class ampbhion:public species{
     public:
+    int ageSpan = 120;
     string home = "Water";
     void sayOut(){
         cout << "Hello I am ampbhion"<< endl;
     };
 };
-class cocodile: public mammel {
+// sub calss under subclass mammel
+class cocodile: public ampbhion {
     public:
     string species;
     };
@@ -37,5 +42,10 @@ int main(){
     cout << coco1.home << endl;
     coco1.sex = 1;
     cout << coco1.sex <<endl;
+    mammel Human;
+    Human.name = "Abhi";
+    cout<<Human.ageSpan<<" Years, Name is "<< Human.name;
+
+
 
 }
