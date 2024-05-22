@@ -28,7 +28,9 @@ int main(){
     // Sorting
     sortArray(array_1,n);
     cout << endl; // Line break
+    cout << "Hello sorting"<< endl;
     print_array(array_1, n); // print
+    cout << endl << "Hello Sorted";
     // Swaping the alternate array
     cout << endl << "Swaping the alternating element:" << endl;
     alternateSwap(array_1,n);
@@ -101,12 +103,16 @@ string isFoundElement( int array[], int n, int key){
 
 }
 
-// Soritng
+// Sorting bubble sort
 void sortArray(int array[], int n){
-    int i=0, j=0;
-    while(i<n){
-        while(j<n){
+    int i=0;
+    while(i<(n)){
+        int j = 0;
+        while(j<(n-i-1)){
             if(array[j+1]<array[j]){
+                int temp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = temp;
             }
             j++;
         }
