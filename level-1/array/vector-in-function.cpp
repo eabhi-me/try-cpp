@@ -16,6 +16,7 @@ void fun1(vector<int> myVec1){
         cout << i << " ";
     }
 }
+// passe by refrence
 void fun2(vector<int> & myVec2){
     myVec2.push_back(7656);
 }
