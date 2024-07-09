@@ -16,6 +16,20 @@ int main(){
     str4.clear();
     str4.append("New Line");
     str4.append(str1,0,5);
+    //  find returns index where pattern is found.
+    //  If pattern is not there it returns predefined
+    //  constant npos whose value is -1
+ 
+    // if (str6.find(str4) != string::npos){
+    //     cout << "str4 found in str6 at " << str6.find(str4) << " pos" << endl;
+    // }
+    // else{
+    //      cout << "str4 not found in str6" << endl;
+    // }
+
+    cout << "form: substring :" << str6.substr(0,3) << endl;
+ 
+       
 
     cout << str3.at(2) << endl;
     cout << str1 << endl;
@@ -26,6 +40,7 @@ int main(){
     cout << str6 << endl;
     cout << str2.front() << endl;
     cout << str2.back() << endl;
+
 
     
 }
