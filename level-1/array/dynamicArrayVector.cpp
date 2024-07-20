@@ -8,8 +8,10 @@ int main(){
     vector<int> myVec2(10,0); // copying 10 zero element in array
     
     vector<int> myVec3; // only declare
+    int x;
     for(int i=0; i<8; i++){  // passing through lops
-        myVec3.push_back(i); // using push_back at end
+        cin >> x;
+        myVec3.push_back(x); // using push_back at end
     }
     
     myVec3.push_back(45); // elememt at last add 
@@ -43,6 +45,10 @@ int main(){
     myVec5.assign(5,1);
     for(int i : myVec5){
         cout << i << " ";
+    }
+    cout << endl << "Myvec: ";
+    for(auto it: myVec3){
+        cout << it << " ";
     }
 }
  
