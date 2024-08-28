@@ -2,10 +2,13 @@
 using namespace std;
 int squareRootSearch(int n){
     int high = n/2;
-    int start=1;
-    int ans;
+    int start=0;
+    int mid, ans;
+    if(n==0 || n==1){
+        return n;
+    }
     while(start<=high){
-        int mid = (start+high)/2;
+        mid = (start+high)/2;
         if(mid*mid==n){
             return mid;
         }
@@ -21,6 +24,6 @@ int squareRootSearch(int n){
     
 }
 int main(){
-    cout << squareRootSearch(30);
+    cout << squareRootSearch(0);
     return 0;
 }

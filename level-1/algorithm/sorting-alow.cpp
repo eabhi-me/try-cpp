@@ -55,7 +55,7 @@ void insertionSort(int array[], int n){
     process insetion sort----
     in this we take a variable "i" to iterate over the loop from 2nt to last;
     take a key variable assign it 2nd postion element;
-    now take another variable j and j assign its value i-i, i less than i, so to ccheck the left of key
+    now take another variable j and j assign its value i-i, 1 less than i, so to check the left of key
     start a loop which iterate when j>0 (means left side)
     and when key value is less than lest side of as j change its postion until right order
     by swaping the adajcent position

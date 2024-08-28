@@ -5,7 +5,7 @@ int binarySearch(int array[], int n,  int key);
 int main(){
     int sample1[]= {1,5,8,10,15,20,25,30};
     int n = sizeof(sample1)/sizeof(sample1[0]);
-    cout << binarySearch(sample1, n, 30);
+    cout << binarySearch(sample1, n, 2);
     return 0;}
 
 int binarySearch(int array[], int n, int key){

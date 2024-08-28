@@ -10,7 +10,7 @@ int  countSubsets(int arr[], int n, int sum){
 int main(){
     int arr[]= {10, 20, 15,45,1,5,6,9,25};
     int n = sizeof(arr)/sizeof(arr[0]);
-    int sum = 25;
+    int sum = 10;
     	
     cout << countSubsets(arr, n, sum);
     	
