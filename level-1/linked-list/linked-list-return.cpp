@@ -13,13 +13,14 @@ struct Node{
 void printNode(Node* head){
     if(!head){
         cout << "Head pointer is NuLL, No Element in the list";
+        return;
     }
     Node *curr = head;
     while(curr!=nullptr){
         cout << curr->data << " --> ";
         curr = curr->next;
     }
-    cout << "Null";
+    cout << "Null"<<endl;
 }
 
 void printNodeRecursive(Node* head){
@@ -33,18 +34,25 @@ void printNodeRecursive(Node* head){
 }
 
 // No Need to "Node* &head" as we overrite the head form return head
-Node *AddNodeLast(Node* head, int dt){
-    if(head==nullptr){
+Node *AddNodeLast(Node* head, int dt) {
+    if (head == nullptr) {
         head = new Node(dt);
-        return head; 
+        return head;
     }
-    Node *temp = new Node(dt);
-    head->next = temp;
+    Node* temp = head;
+    while (temp->next != nullptr) {
+        temp = temp->next;
+    }
+    temp->next = new Node(dt);
     return head;
 }
 
 Node *AddNodestart(Node* head, int dt){
     Node *temp = new Node(dt);
+    if(!head){
+        head = temp;
+        return head;
+    }
     temp->next = head;
     head = temp;
     return head;
@@ -55,7 +63,7 @@ Node *DeleteNodeEnd(Node* head){
         cout << "List is already empty"<<endl;
         return nullptr;
     }
-    if(head->next=nullptr){
+    else if(head->next=nullptr){
         delete head;
         return nullptr;
     }
@@ -85,7 +93,7 @@ Node *InsertNodeInSequence(Node *head, int ele){
         return head;
     }
 
-    if(head->data>ele){
+    else if(head->data>ele){
         Node *newNode1 = new Node(ele);
         newNode1->next=head;
         head=newNode1;
