@@ -2,6 +2,7 @@
 #include<iostream>
 #include<algorithm>
 using namespace std;
+// Not store the element, only print the function 
 void merge2arr(int arr1[],int arr2[],int n1, int n2){
     int i = 0,  j = 0;
     bool arr1EndEl;
@@ -20,7 +21,7 @@ void merge2arr(int arr1[],int arr2[],int n1, int n2){
         arr1EndEl = false;
        }  
     }
-    // check for the remaining element in ohter element
+    // check for the remaining element in other element
     if (arr1EndEl){
        while (j<n2){
             cout << arr2[j] << " ";
@@ -44,27 +45,28 @@ void seperateSort(int arr1[],int arr2[],int n, int m){
         end1--;
         start2++;
     }
-    sort(arr1,arr1+n);
+    sort(arr1,arr1+n); // Using inbuild sort function 
     sort(arr2,arr2+m);
 }
 
-// To print
+// To print the array
 void printarr(int arr[],int n){
     for(int i=0; i<n; i++){
         cout << arr[i] << " ";
     }
 }
+
 int main(){
     int arr1[]={1,4,8,10,14,21,90};
     int n1 = sizeof(arr1)/sizeof(arr1[0]);
     int arr2[]= {2,3,5,7,15,20,86};
     int n2 = sizeof(arr2)/sizeof(arr2[0]);
     seperateSort(arr1,arr2,n1,n2);
+    cout << "First array: ";
     printarr(arr1,n1);
-    cout << "\nsecond arr: " << endl;
+    cout << "\nSecond arr: ";
     printarr(arr2,n2);
-
+    cout << "\nMerge Two array: " <<endl;
     // merge2arr(arr1, arr2, n1, n2);
-
     return 0;
 }
