@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+// wrong hai
 int frequencyCount(int arr[],int n){
     int counter=0, count = 1, lEle=arr[0] ;
     for(int i=1; i<n; i++){
