@@ -17,7 +17,13 @@ class tree{
 };
 
 bool isChildrenSum(tree *mytree){
+    if(mytree==nullptr){return true;}
+    if(mytree->left==nullptr && mytree->right == nullptr){return true;}
     int sum = 0;
+    if(mytree->left!=nullptr){sum +=mytree->left->data;}
+    if(mytree->right!=nullptr){sum +=mytree->right->data;}
+    return (mytree->data==sum && isChildrenSum(mytree->left) && isChildrenSum(mytree->right));
+
     
 }
 int main(){
@@ -29,6 +35,6 @@ int main(){
     mytree->left->right = new tree(10);
     mytree->right->left = new tree(20);
     mytree->right->right = new tree(10);
-
-
+    cout << isChildrenSum(mytree);
+    return 0;
 }
